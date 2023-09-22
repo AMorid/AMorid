@@ -8,11 +8,13 @@ def type_your_message_():
         print("Your message is too long. Try again.")
         return
     date_time = datetime.datetime.now()
-    name = input("Tyoe your name (Or leave it 'anonymous'): ")
+    name = input("Type your name (Or leave it 'anonymous'): ")
     if not name:
         name = "anonymous"
     station = random.choice(stations)
     return message, date_time, name, station
 def save_messages(message):
     with open('messages.csv', mode='a', newline='') as message_file:
+        message_Writer = csv.writer(message_file)
+        message_Writer.writerow(message)
 
