@@ -4,7 +4,6 @@ import datetime
 # https://www.w3schools.com/python/python_datetime.asp
 import random
 # https://docs.python.org/3/library/random.html
-
 stations = ["Amsterdam", "Utrecht", "Leiden", "Groningen"]
 def enter_message():
     message = input("Write your message (no more than 140 characters): ")
@@ -25,4 +24,3 @@ def save_message(message):
     with open('messages.csv', mode='a', newline='') as messages_file:
         messages_writer = csv.writer(messages_file)
         messages_writer.writerow(message)
-
