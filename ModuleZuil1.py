@@ -39,7 +39,6 @@ def enter_message():
         passenger_name = "anonymous"
     station = random.choice(stations)
     return message, date_time, passenger_name, station
-
 def save_message(message):
     with open('messages.csv', mode='a', newline='') as messages_file:
         messages_writer = csv.writer(messages_file)
