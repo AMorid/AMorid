@@ -14,9 +14,16 @@ def read_messages(csv_file):
 def write_to_database(messages, approval, review_date_time, moderator_name, moderator_email):
     try:
         connection = psycopg2.connect(
-            user="MoridA",
+            user="postgres",
             password="********",
             host="localhost",
-            port="5432",
-            database="Moderatie"
+            port_id="5432",
+            database="Moderatie",
         )
+cursor = connection.cursor()
+        for message, date_time, name, station in messages:
+            cursor.execute(
+                "INSERT INTO messages (message, date_time, name, station, approval, review_date_time, moderator_name, moderator_email) "
+                "VALUES (%s, %s, %s, %s, %s, %s, %s, %s)",
+                (message, date_time, name, station, approval, review_date_time, moderator_name, moderator_email)
+            )
