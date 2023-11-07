@@ -18,13 +18,12 @@ def save_message(message):
         messages_writer = csv.writer(messages_file)
         messages_writer.writerow(message)
     print(message)
-# Kleine deel van de line 43 geïnspireerd door ChatGpT.
 save_message(enter_message())
 def save_message_cvs():
     with open('messages.csv', mode='a', newline='') as messages_file:
         messages_writer = csv.writer(messages_file)
         messages_writer.writerow(messages_writer)
-        # Bronen die gebruikte
+        # Bronen die ik gebruikte
         # ChatGPT
         # https://docs.python.org/3.10/library/csv.html
         # https://www.w3schools.com/python/python_datetime.asp
