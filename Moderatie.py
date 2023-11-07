@@ -36,7 +36,7 @@ def main():
 
     args = parser.parse_args()
 
-    # Bericheten worden gelezen van mijn text bestanden.
+    # Bericheten worden gelezen vanuit mijn text bestanden.
     with open('messages.csv', mode='r', newline='') as file:
         reader = csv.reader(file)
         for row in reader:
