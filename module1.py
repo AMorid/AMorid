@@ -25,6 +25,6 @@ def save_message_cvs():
         messages_writer.writerow(messages_writer)
         # Bronen die ik gebruikte
         # ChatGPT
-        #http://www.spronck.net/pythonbook/pythonboek.pdf
+        # http://www.spronck.net/pythonbook/pythonboek.pdf
         # https://docs.python.org/3.10/library/csv.html
         # https://www.w3schools.com/python/python_datetime.asp
