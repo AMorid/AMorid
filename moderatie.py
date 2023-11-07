@@ -1,7 +1,6 @@
 import csv
 import argparse
 from datetime import datetime
-
 def read_messages(csv_file):
     messages = []
     with open(csv_file, newline='') as csvfile:
@@ -21,11 +20,6 @@ def write_to_database(messages, approval, review_date_time, moderator_name, mode
 cursor = connection.cursor()
 # kreeg een fout melding hier.
 for message, date_time, name, station in messages:
-            cursor.execute(
-                "INSERT INTO messages (message, date_time, name, station, approval, review_date_time, moderator_name, moderator_email) "
-                "VALUES (%s, %s, %s, %s, %s, %s, %s, %s)",
-                (message, date_time, name, station, approval, review_date_time, moderator_name, moderator_email)
-            )
-    # Helaas mij is het niet geukt om een verbiding te maken met postgresSQL.
+# Helaas mij is het niet geukt(niet geleerd) om een verbiding te maken met postgresSQL.
 
 
