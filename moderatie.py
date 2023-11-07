@@ -26,6 +26,9 @@ for message, date_time, name, station in messages:
                 "VALUES (%s, %s, %s, %s, %s, %s, %s, %s)",
                 (message, date_time, name, station, approval, review_date_time, moderator_name, moderator_email)
             )
-    # Helaas mij is het niet geukt om een verbiding te maken met postgresSQL.
-
+        # Bronen die ik gebruikte
+        # ChatGPT
+        # http://www.spronck.net/pythonbook/pythonboek.pdf
+        # https://docs.python.org/3.10/library/csv.html
+        # https://www.w3schools.com/python/python_datetime.asp
 
